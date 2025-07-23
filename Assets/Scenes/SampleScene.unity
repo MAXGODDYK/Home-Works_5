@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa5e2d94fc877f49bc48030e20c1dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 123184909}
-  Speed: 6
+  _speed: 20
+  _materialRenderer: {fileID: 123184912}
 --- !u!65 &123184911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -198,7 +198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 7cc00e245f41a564d9e6237d6e893d1c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -913,6 +913,7 @@ GameObject:
   - component: {fileID: 1889578088}
   - component: {fileID: 1889578087}
   - component: {fileID: 1889578086}
+  - component: {fileID: 1889578090}
   m_Layer: 0
   m_Name: teleport1
   m_TagString: Untagged
@@ -1009,6 +1010,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -0.35, y: -0.247, z: 0.018}
+--- !u!114 &1889578090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889578085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 995fa606e354b794b8a9f1849176bb6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _teleportX: 5
+  _teleportZ: 5
+  _player: {fileID: 123184909}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
