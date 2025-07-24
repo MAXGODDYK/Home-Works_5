@@ -5,6 +5,7 @@ public class HorizontalMover : MonoBehaviour
     [SerializeField] private float _speed = 6f;
     [SerializeField] private Renderer _materialRenderer;
 
+    private static string PlayerTag = "Untagged";
 
     private void Update()
     {
@@ -16,7 +17,11 @@ public class HorizontalMover : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _materialRenderer.material = other.GetComponent<Renderer>().material;
+        if (other.gameObject.CompareTag(PlayerTag))
+        {
+            _materialRenderer.material = other.GetComponent<Renderer>().material;
+            
+        }
         Debug.Log("Material changed to: " + other.GetComponent<Renderer>().material.name);
     }
 }
